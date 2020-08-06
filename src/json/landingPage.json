@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "coworking": 9238,
+    "auditorium": 2094,
+    "hall": 2343
+  },
+  "mostVisited": [
+    {
+      "_id": "cow123456",
+      "name": "Grand Co's & Cafe",
+      "type": "coworking-space",
+      "imageUrl": "/images/cow-1.jpg",
+      "city": "Jember",
+      "province": "Jawa Timur",
+      "price": "12500",
+      "unit": "hour"
+    },
+    {
+      "_id": "cow123456",
+      "name": "TedSpace",
+      "type": "coworking-space",
+      "imageUrl": "/images/cow-2.jpg",
+      "city": "Jember",
+      "province": "Jawa Timur",
+      "price": "13000",
+      "unit": "hour"
+    },
+    {
+      "_id": "cow123456",
+      "name": "Lako T Building",
+      "type": "auditorium",
+      "imageUrl": "/images/audi-1.jpg",
+      "city": "Jember",
+      "province": "Jawa Timur",
+      "price": "50000",
+      "unit": "hour"
+    },
+    {
+      "_id": "cow123456",
+      "name": "East Wing Center",
+      "type": "auditorium",
+      "imageUrl": "/images/hall-2.jpg",
+      "city": "Jember",
+      "province": "Jawa Timur",
+      "price": "25000000",
+      "unit": "hour"
+    },
+    {
+      "_id": "cow123456",
+      "name": "TellX hall",
+      "type": "hall",
+      "imageUrl": "/images/hall-1.jpg",
+      "city": "Jember",
+      "province": "Jawa Timur",
+      "price": "17200000",
+      "unit": "hour"
+    }
+  ]
+}
