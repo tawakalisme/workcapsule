@@ -43,216 +43,220 @@
 @import "spinners";
 @import "utilities";
 @import "print";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .brand-text-icon {
-    color: $deepblue;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
-    transition: .2s ease-in;
+  color: $deepblue;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  transition: 0.2s ease-in;
 
-    &:hover {
-        text-decoration: none;
-        opacity: 72%;
-    }
+  &:hover {
+    text-decoration: none;
+    opacity: 72%;
+  }
 }
 
 a {
-    transition: ease-in .2s;
+  transition: ease-in 0.2s;
+  // text-decoration: none;
 }
 
 h1,
-h2 {
-    color: $deepblue;
+h2,
+h3,
+h4 {
+  color: $deepblue;
+  font-weight: 600;
 }
 
 header {
-    box-shadow: 0px 2px 16px rgba(142, 142, 142, 0.24);
-    background: $white;
+  box-shadow: 0px 2px 16px rgba(142, 142, 142, 0.24);
+  background: $white;
 
-    .navbar {
-        height: 72px;
-        margin-bottom: 48px;
+  .navbar {
+    height: 72px;
+    margin-bottom: 48px;
 
-        ul.navbar-nav {
-            li.nav-item {
-                &.active {
-                    a.nav-link {
-                        color: $blue;
-                    }
-                }
-
-                a {
-                    &.nav-link {
-
-                        font-family: Poppins;
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 18px;
-                        line-height: 27px;
-                        text-align: right;
-                        color: $deepblue;
-
-                        &:hover {
-                            color: $blue;
-                        }
-                    }
-                }
-            }
+    ul.navbar-nav {
+      li.nav-item {
+        &.active {
+          a.nav-link {
+            color: $blue;
+          }
         }
+
+        a {
+          &.nav-link {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: right;
+            color: $deepblue;
+
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 section {
-    margin-bottom: 48px;
+  margin: 24px 0;
+  padding: 24px 0;
 }
 
 .img-cover {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .img-contain {
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
 }
 
 .card {
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 16px rgba(142, 142, 142, 0.24);
+  border: none;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 2px 16px rgba($black, 0.32);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .tag {
+    z-index: 3;
+    font-size: 0.875rem;
+    background-color: $orange;
+    padding: 0.25rem 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 32px;
+    border-radius: 0 1rem;
+    color: $white;
+    font-weight: 600;
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  &.card-featured {
+    overflow: hidden;
+    cursor: pointer;
     height: 100%;
-    border-radius: 1rem;
-    box-shadow: 0px 2px 16px rgba(142, 142, 142, 0.24);
-    border: none;
-    transition: .2s ease-in-out;
+
+    &:after {
+      z-index: 2;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scale(1.1);
+      transition: 0.5s ease-in-out;
+      @include gradient-y(rgba($black, 0), rgba($black, 0.875), 50%, 100%);
+    }
+
+    .img-wrapper {
+      z-index: 1;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      transform: scale(1);
+      transition: 0.2s ease-in-out transform;
+    }
+
+    .meta-wrapper {
+      width: 100%;
+      color: $white;
+      text-decoration: none;
+      z-index: 4;
+      position: absolute;
+      padding: 1rem;
+      top: 0;
+      bottom: 0;
+      transform: translateY(0);
+      transition: 0.5s ease-in-out transform;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
 
     &:hover {
-        box-shadow: 0px 2px 16px rgba($black, 0.32);
+      .meta-wrapper {
+        transform: translateY(-4px);
+      }
+
+      &:after {
+        transform: scale(1);
+      }
+
+      .img-wrapper {
+        transform: scale(1.1);
+      }
     }
-
-    a {
-        text-decoration: none;
-    }
-
-    .tag {
-        z-index: 3;
-        font-size: 0.875rem;
-        background-color: $orange;
-        padding: .25rem 1rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-height: 32px;
-        border-radius: 0 1rem;
-        color: $white;
-        font-weight: 600;
-
-        span {
-            font-weight: 300;
-        }
-
-    }
-
-    &.card-featured {
-        overflow: hidden;
-        cursor: pointer;
-        height: 100%;
-
-        &:after {
-            z-index: 2;
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            transform: scale(1.1);
-            transition: .5s ease-in-out;
-            @include gradient-y(rgba($black, 0), rgba($black, .875), 50%, 100%);
-        }
-
-        .img-wrapper {
-            z-index: 1;
-            margin: auto;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            position: absolute;
-            transform: scale(1.1);
-            transition: .2s ease-in-out transform;
-        }
-
-        .meta-wrapper {
-            width: 100%;
-            color: $white;
-            text-decoration: none;
-            z-index: 4;
-            position: absolute;
-            padding: 1rem;
-            top: 0;
-            bottom: 0;
-            transform: translateY(0);
-            transition: .5s ease-in-out transform;
-            display: flex;
-            justify-content: flex-end;
-            flex-direction: column;
-        }
-
-        &:hover {
-            .meta-wrapper {
-                transform: translateY(-4px);
-            }
-
-            &:after {
-                transform: scale(1);
-            }
-
-            .img-wrapper {
-                transform: scale(1);
-            }
-        }
-    }
+  }
 }
 
 .img-wrapper {
-    border-radius: 0 16px;
+  img {
     border-radius: 16px;
-
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .meta-wrapper {
-    margin-top: 1 rem;
+  margin-top: 1rem;
 
-    h5 {
-        font-size: 1.25rem;
-        margin-bottom: 2px;
-        font-weight: normal;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    span {
-        font-size: 0.875 rem;
-        font-weight: normal;
-    }
+  h5 {
+    font-size: 1.25rem;
+    margin-bottom: 2px;
+    font-weight: normal;
+  }
+
+  span {
+    font-size: 0.875 rem;
+    font-weight: normal;
+  }
 }
 
 .image-hero {
-    border-radius: 16px 64px;
-    box-shadow: 0px 2px 16px rgba(142, 142, 142, 0.24);
-    overflow: hidden;
+  border-radius: 16px 64px;
+  box-shadow: 0px 2px 16px rgba(142, 142, 142, 0.24);
+  overflow: hidden;
 
-    img {
-        height: 500px;
-        width: auto;
-        object-fit: cover;
-    }
+  img {
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+  }
 }

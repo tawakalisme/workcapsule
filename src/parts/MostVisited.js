@@ -5,7 +5,7 @@ import { priceFormat } from "utils/NumberFormat";
 
 export default function MostVisited(props) {
   return (
-    <section className="container" ref={props.refMost} style={{ height: 2000 }}>
+    <section className="container" ref={props.refMost}>
       <h4 className="mb-3">Most Visited Places</h4>
       <div className="container-grid">
         {props.data.map((item, index) => {
@@ -28,7 +28,7 @@ export default function MostVisited(props) {
                     className="streched-link d-block text-white"
                     href={`/${item.type}/${item._id}`}
                   >
-                    {<h5>{item.name}</h5>}
+                    <h5>{item.name}</h5>
                     <span>
                       {item.city}, {item.province}
                     </span>

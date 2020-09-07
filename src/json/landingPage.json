@@ -37,9 +37,9 @@
     },
     {
       "_id": "cow123456",
-      "name": "East Wing Center",
-      "type": "auditorium",
-      "imageUrl": "/images/hall-2.jpg",
+      "name": "East Wing Convention Hall",
+      "type": "hall",
+      "imageUrl": "/images/hall-1.jpg",
       "city": "Jember",
       "province": "Jawa Timur",
       "price": "25000000",
@@ -47,13 +47,129 @@
     },
     {
       "_id": "cow123456",
-      "name": "TellX hall",
+      "name": "TellX Hall",
       "type": "hall",
-      "imageUrl": "/images/hall-1.jpg",
+      "imageUrl": "/images/hall-2.jpg",
       "city": "Jember",
       "province": "Jawa Timur",
       "price": "17200000",
       "unit": "hour"
+    }
+  ],
+  "categories": [
+    {
+      "_id": "coworking-space",
+      "name": "Cozy Coworking Spaces",
+      "items": [
+        {
+          "_id": "cowp1",
+          "name": "Grand Co's & Cafe",
+          "imageUrl": "/images/cow-1.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": true
+        },
+        {
+          "_id": "cowp2",
+          "name": "TedSpace",
+          "imageUrl": "/images/cow-2.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": false
+        },
+        {
+          "_id": "cowp3",
+          "name": "XYZone",
+          "imageUrl": "/images/cow-3.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": false
+        },
+        {
+          "_id": "cowp4",
+          "name": "Nocturnal Co.",
+          "imageUrl": "/images/cow-4.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": false
+        }
+      ]
+    },
+    {
+      "_id": "auditorium",
+      "name": "Auditorium with Stage",
+      "items": [
+        {
+          "_id": "auditorium",
+          "name": "Lako T Building",
+          "imageUrl": "/images/audi-1.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": true
+        },
+        {
+          "_id": "auditorium",
+          "name": "Masayuki C Building",
+          "imageUrl": "/images/audi-2.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": false
+        },
+        {
+          "_id": "auditorium",
+          "name": "X City Auditorium",
+          "imageUrl": "/images/audi-3.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": false
+        },
+        {
+          "_id": "auditorium",
+          "name": "Hall A Jember University",
+          "imageUrl": "/images/audi-4.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": false
+        }
+      ]
+    },
+    {
+      "_id": "hall",
+      "name": "Selected Hall for Conference",
+      "items": [
+        {
+          "_id": "hall",
+          "name": "East Wing Convention Hall",
+          "imageUrl": "/images/hall-1.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": true
+        },
+        {
+          "_id": "hall",
+          "name": "TellX Hall",
+          "imageUrl": "/images/hall-2.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": false
+        },
+        {
+          "_id": "hall",
+          "name": "X City Hall",
+          "imageUrl": "/images/hall-3.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": false
+        },
+        {
+          "_id": "hall",
+          "name": "West Wing Convention Hall",
+          "imageUrl": "/images/hall-4.jpg",
+          "city": "Jember",
+          "province": "Jawa Timur",
+          "isPopular": false
+        }
+      ]
     }
   ]
 }
