@@ -171,5 +171,14 @@
         }
       ]
     }
-  ]
+  ],
+  "testimonial": {
+    "_id": "testi1",
+    "imageUrl": "/images/user-story.png",
+    "title": "Some people say:",
+    "rate": 4.5,
+    "content": "Everytime I need a new atmosphere while working, I just pick a place and go!",
+    "username": "Elizabeth Banks",
+    "useroccupation": "Writer"
+  }
 }

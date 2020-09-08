@@ -6,6 +6,8 @@ import MostVisited from "parts/MostVisited";
 
 import landingPage from "json/landingPage.json";
 import Categories from "parts/Categories";
+import Testimonial from "parts/Testimonial";
+import Footer from "parts/Footer";
 
 class LandingPage extends Component {
   constructor(props) {
@@ -20,6 +22,8 @@ class LandingPage extends Component {
         <Hero refMost={this.refMost} data={landingPage.hero} />
         <MostVisited refMost={this.refMost} data={landingPage.mostVisited} />
         <Categories data={landingPage.categories} />
+        <Testimonial data={landingPage.testimonial}/>
+        <Footer/>
       </>
     );
   }
